@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>repair.service.repository</RootNamespace>
+    <AssemblyName>repair.service.repository</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\repair-service-data\repair-service-data.csproj" />
+    <ProjectReference Include="..\repair-service-shared\repair-service-shared.csproj" />
+  </ItemGroup>
+
+</Project>

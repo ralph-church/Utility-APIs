@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "repair-service-api", "repair-service-api\repair-service-api.csproj", "{6BEC940B-F504-4113-A308-A5BA5CF27AB8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "repair-service-data", "repair-service-data\repair-service-data.csproj", "{FFC6A2F0-1322-4867-87F7-2770E83EE2BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "repair-service-repository", "repair-service-repository\repair-service-repository.csproj", "{D3154D71-137D-4A26-8247-84217B20B157}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "repair-service-service", "repair-service-service\repair-service-service.csproj", "{A6BA0867-A7D8-4441-A2DD-E95F6779A374}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "repair-service-shared", "repair-service-shared\repair-service-shared.csproj", "{A454BE3D-00DD-426B-AF91-69623C5CCC08}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "repair-service-shared-exception", "repair-service-shared-exception\repair-service-shared-exception.csproj", "{266AB0B6-1597-4494-899E-F86BB2D5FDA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "repair-service-unit-tests", "repair-service-unit-tests\repair-service-unit-tests.csproj", "{C4DBF285-ECBA-4008-ACC3-D2FCB2005B8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{19479842-A9E8-4DBE-ADD6-1C38424A63FD}"
+	ProjectSection(SolutionItems) = preProject
+		ci.yaml = ci.yaml
+		Dockerfile = Dockerfile
+		Dockerfile-Local = Dockerfile-Local
+		invokeServices.sh = invokeServices.sh
+		k8s.yaml = k8s.yaml
+		NuGet.Config = NuGet.Config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "integration.services.kafka.shared", "integration.services.kafka.shared\integration.services.kafka.shared.csproj", "{F47D2C06-F468-46BC-986D-BC42E626F7D7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "integration-service-kafka-test", "integration-service-kafka-test\integration-service-kafka-test.csproj", "{CDAFDF4A-1FD4-448B-9185-F91C201E4F87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BEC940B-F504-4113-A308-A5BA5CF27AB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BEC940B-F504-4113-A308-A5BA5CF27AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BEC940B-F504-4113-A308-A5BA5CF27AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BEC940B-F504-4113-A308-A5BA5CF27AB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFC6A2F0-1322-4867-87F7-2770E83EE2BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFC6A2F0-1322-4867-87F7-2770E83EE2BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFC6A2F0-1322-4867-87F7-2770E83EE2BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFC6A2F0-1322-4867-87F7-2770E83EE2BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3154D71-137D-4A26-8247-84217B20B157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3154D71-137D-4A26-8247-84217B20B157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3154D71-137D-4A26-8247-84217B20B157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3154D71-137D-4A26-8247-84217B20B157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6BA0867-A7D8-4441-A2DD-E95F6779A374}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6BA0867-A7D8-4441-A2DD-E95F6779A374}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6BA0867-A7D8-4441-A2DD-E95F6779A374}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6BA0867-A7D8-4441-A2DD-E95F6779A374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A454BE3D-00DD-426B-AF91-69623C5CCC08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A454BE3D-00DD-426B-AF91-69623C5CCC08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A454BE3D-00DD-426B-AF91-69623C5CCC08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A454BE3D-00DD-426B-AF91-69623C5CCC08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{266AB0B6-1597-4494-899E-F86BB2D5FDA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{266AB0B6-1597-4494-899E-F86BB2D5FDA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{266AB0B6-1597-4494-899E-F86BB2D5FDA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{266AB0B6-1597-4494-899E-F86BB2D5FDA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4DBF285-ECBA-4008-ACC3-D2FCB2005B8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4DBF285-ECBA-4008-ACC3-D2FCB2005B8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4DBF285-ECBA-4008-ACC3-D2FCB2005B8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4DBF285-ECBA-4008-ACC3-D2FCB2005B8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F47D2C06-F468-46BC-986D-BC42E626F7D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F47D2C06-F468-46BC-986D-BC42E626F7D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F47D2C06-F468-46BC-986D-BC42E626F7D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F47D2C06-F468-46BC-986D-BC42E626F7D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDAFDF4A-1FD4-448B-9185-F91C201E4F87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDAFDF4A-1FD4-448B-9185-F91C201E4F87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDAFDF4A-1FD4-448B-9185-F91C201E4F87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDAFDF4A-1FD4-448B-9185-F91C201E4F87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4ED0D3A4-9EC3-458F-A124-BF7B35539FB3}
+	EndGlobalSection
+EndGlobal

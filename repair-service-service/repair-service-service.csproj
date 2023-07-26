@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>repair.service.service</RootNamespace>
+    <AssemblyName>repair.service.service</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\integration.services.kafka.shared\integration.services.kafka.shared.csproj" />
+    <ProjectReference Include="..\repair-service-data\repair-service-data.csproj" />
+    <ProjectReference Include="..\repair-service-repository\repair-service-repository.csproj" />
+    <ProjectReference Include="..\repair-service-shared\repair-service-shared.csproj" />
+  </ItemGroup>
+
+</Project>

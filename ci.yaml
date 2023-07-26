@@ -1,0 +1,27 @@
+{
+  "apiVersion": "platform.api.ttc.transportation.trimble.com/v202108",
+  "kind": "Project",
+  "metadata": {
+    "gitRepoName": "trimble.transportation.maintenance.repair-service.v1",
+    "googleChatWebhookUrl": "https://chat.googleapis.com/v1/spaces/AAAAsnJ1cRg/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=OIs2NMa_U_qCZOe8UJjQGJZ0L1SPs53jkYRAo-de33A%3D",
+    "imageName": "tcx/maintenancerepairservicev1",
+    "team": "tcx-amssteel",
+    "projectName": "tcx",
+    "webhookScanToken": "tcx-maintenancerepairservicev1",
+    "artifactory": "false",
+    "monorepo": "false",
+    "scan": "false",
+    "sonar_projectname": {
+      "tcx-maintenancerepairservicev1": "TMW.TCX:trimble.transportation.maintenance.repair-service.v1"
+    },
+    "whitesource_projectname": {
+      "tcx-maintenancerepairservicev1": "trimble.transportation.maintenance.repair-service.v1"
+    },
+    "spinnakerPipelineName": {
+      "tcx-maintenancerepairservicev1": "tcx-maintenancerepairservicev1"
+    },
+    "projectRunType": {
+      "tcx-maintenancerepairservicev1": ".Net"
+    }
+  }
+}

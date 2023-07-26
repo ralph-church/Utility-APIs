@@ -1,0 +1,47 @@
+#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+
+#Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
+#For more information, please see https://aka.ms/containercompat
+
+FROM mcr.microsoft.com/dotnet/aspnet:5.0-focal AS base
+WORKDIR /app
+EXPOSE 80
+
+FROM mcr.microsoft.com/dotnet/sdk:5.0-focal AS build
+WORKDIR /src
+COPY ["repair-service-api/repair-service-api.csproj", "repair-service-api/"]
+COPY ["repair-service-repository/repair-service-repository.csproj", "repair-service-repository/"]
+COPY ["repair-service-data/repair-service-data.csproj", "repair-service-data/"]
+COPY ["repair-service-service/repair-service-service.csproj", "repair-service-service/"]
+RUN dotnet restore "repair-service-api/repair-service-api.csproj"
+COPY . .
+WORKDIR /src/src/repair-service-api
+RUN dotnet build repair-service-api.csproj -c Release -o /app/build
+
+### run unit tests, failing container build if tests fail
+WORKDIR /src/repair-service-unit-tests
+
+RUN dotnet test --verbosity=normal --results-directory /app/publish --logger "trx;LogFileName=coverage.xml" repair-service-unit-tests.csproj
+
+WORKDIR /src/integration-service-kafka-test
+
+RUN dotnet test --verbosity=normal --results-directory /app/publish --logger "trx;LogFileName=coverage1.xml" integration-service-kafka-test.csproj
+
+
+WORKDIR /src/repair-service-api
+###
+
+FROM build AS publish
+RUN dotnet publish repair-service-api.csproj -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+
+# Workaround to support connecting to MongoAtlas 4.0 version from ASP.NETCORE 5.0
+# ASPNETCORE 5.0 uses a cipher logic which is not supported in Mongo Altas 4.0
+# Once the MongoAtlas Server is upgraded to 5.0, this step should be removed.
+COPY openssl.cnf /etc/ssl/openssl.cnf
+
+EXPOSE 80
+ENTRYPOINT ["dotnet", "repair.service.api.dll"]
